@@ -6,5 +6,6 @@
     <string name="descMainIcon">descMainIcon</string>
     <string name="descDialPad">descDialPad</string>
     <string name="descScanner">descScanner</string>
+    <string name="MainScreenOption">Select  optiion bellow to enter the ISBN </string>
 
 </resources>

@@ -24,8 +24,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:contentDescription="@string/descMainIcon"
             android:scaleType="fitXY"
+            android:contentDescription="@string/descMainIcon"
             android:src="@drawable/ic_book_white_48dp" />
 
         <TextView
@@ -35,6 +35,17 @@
             android:text="@string/app_name"
             android:textColor="@color/white"
             android:textSize="36sp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text="@string/MainScreenOption"
+            android:textColor="@color/white"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:id="@+id/editText"
+            android:textAlignment="center" />
 
 
     </LinearLayout>
@@ -64,24 +75,21 @@
                 android:id="@+id/numberPadButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="150dp"
-                android:layout_marginStart="150dp"
+                android:layout_marginLeft="100dp"
                 android:background="#0000"
-                android:contentDescription="@string/descDialPad"
                 android:onClick="openDialpadLayout"
+                android:contentDescription="@string/descDialPad"
                 android:src="@drawable/ic_dialpad_white_48dp" />
 
             <ImageButton
                 android:id="@+id/scannerButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="150dp"
-                android:layout_marginLeft="300dp"
-                android:layout_marginRight="150dp"
-                android:layout_marginStart="300dp"
+                android:layout_marginRight="100dp"
+                android:layout_marginLeft="100dp"
                 android:background="#0000"
-                android:contentDescription="@string/descScanner"
                 android:onClick="openScannerLayout"
+                android:contentDescription="@string/descScanner"
                 android:src="@drawable/ic_center_focus_strong_white_48dp" />
 
 
