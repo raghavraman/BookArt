@@ -1,4 +1,4 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -8,43 +8,84 @@
     <!-- The primary full-screen view. This can be replaced with whatever view
          is needed to present your content, e.g. VideoView, SurfaceView,
          TextureView, etc. -->
-    <TextView
-        android:id="@+id/fullscreen_content"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:keepScreenOn="true"
-        android:text="@string/dummy_content"
-        android:textColor="#33b5e5"
-        android:textSize="50sp"
-        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/app_icon_layout"
+        style="?metaButtonBarStyle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:layout_marginTop="100dp"
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:contentDescription="@string/descMainIcon"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_book_white_48dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/app_name"
+            android:textColor="@color/white"
+            android:textSize="36sp" />
+
+
+    </LinearLayout>
+
 
     <!-- This FrameLayout insets its children based on system windows using
          android:fitsSystemWindows. -->
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
         android:fitsSystemWindows="true">
 
         <LinearLayout
             android:id="@+id/fullscreen_content_controls"
             style="?metaButtonBarStyle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="381dp"
+            android:layout_height="143dp"
             android:layout_gravity="bottom|center_horizontal"
-            android:background="@color/black_overlay"
+            android:layout_marginBottom="10dp"
             android:orientation="horizontal"
             tools:ignore="UselessParent">
 
-            <Button
-                android:id="@+id/dummy_button"
-                style="?metaButtonBarButtonStyle"
-                android:layout_width="0dp"
+            <ImageButton
+                android:id="@+id/numberPadButton"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/dummy_button" />
+                android:layout_marginLeft="150dp"
+                android:layout_marginStart="150dp"
+                android:background="#0000"
+                android:contentDescription="@string/descDialPad"
+                android:onClick="openDialpadLayout"
+                android:src="@drawable/ic_dialpad_white_48dp" />
+
+            <ImageButton
+                android:id="@+id/scannerButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="150dp"
+                android:layout_marginLeft="300dp"
+                android:layout_marginRight="150dp"
+                android:layout_marginStart="300dp"
+                android:background="#0000"
+                android:contentDescription="@string/descScanner"
+                android:onClick="openScannerLayout"
+                android:src="@drawable/ic_center_focus_strong_white_48dp" />
+
 
         </LinearLayout>
     </FrameLayout>
 
-</FrameLayout>
+</RelativeLayout>

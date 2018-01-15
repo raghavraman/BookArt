@@ -3,4 +3,8 @@
 
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="descMainIcon">descMainIcon</string>
+    <string name="descDialPad">descDialPad</string>
+    <string name="descScanner">descScanner</string>
+
 </resources>
